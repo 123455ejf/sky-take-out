@@ -1,0 +1,56 @@
+:root {
+  --ink: #161b22;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --paper: #ffffff;
+  --canvas: #f4f6f8;
+  --brand: #202938;
+  --brand-soft: #eef1f5;
+  --danger: #d14343;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--ink);
+  background: var(--canvas);
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.el-button--primary {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background: #354154;
+  border-color: #354154;
+}
+
+.el-table th.el-table__cell {
+  background: #f8fafb;
+  color: #4b5563;
+  font-weight: 600;
+}
