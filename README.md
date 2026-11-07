@@ -94,5 +94,6 @@ Windows 电脑可直接使用项目内的便携环境：
 - A 模块说明：[docs/A_员工模块交付说明.md](docs/A_员工模块交付说明.md)
 - 运行与交接：[docs/运行验证与接力说明.md](docs/运行验证与接力说明.md)
 - 原始需求：[docs/reference/README.md](docs/reference/README.md)
+- GitHub 发布：[docs/GitHub发布与组员接入.md](docs/GitHub发布与组员接入.md)
 
 接口、数据库字段发生变更时，需要同时更新 `docs/api.md` 和 `sql/init.sql`。
