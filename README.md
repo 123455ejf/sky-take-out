@@ -2,6 +2,8 @@
 
 苍穹外卖是前后端分离的外卖项目，包含商家管理后台和浏览器端客户 H5。
 
+组员协作前请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 当前版本由项目首个开发者搭建，已完成：
 
 - 仓库目录、数据库脚本和协作文档框架
@@ -90,5 +92,7 @@ Windows 电脑可直接使用项目内的便携环境：
 - 接口契约：[docs/api.md](docs/api.md)
 - 开发计划：[docs/plan.md](docs/plan.md)
 - A 模块说明：[docs/A_员工模块交付说明.md](docs/A_员工模块交付说明.md)
+- 运行与交接：[docs/运行验证与接力说明.md](docs/运行验证与接力说明.md)
+- 原始需求：[docs/reference/README.md](docs/reference/README.md)
 
 接口、数据库字段发生变更时，需要同时更新 `docs/api.md` 和 `sql/init.sql`。
