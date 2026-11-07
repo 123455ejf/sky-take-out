@@ -14,7 +14,7 @@ module.exports = defineConfig({
     port: 8082,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: process.env.SKY_API_TARGET || 'http://localhost:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''

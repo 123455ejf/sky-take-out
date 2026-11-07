@@ -8,6 +8,8 @@
 .mvn/wrapper/maven-wrapper.jar
 .tools/
 .qa/
+.runtime/
+release/
 
 # Node
 **/node_modules/

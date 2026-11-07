@@ -62,6 +62,19 @@ npm install
 npm run serve
 ```
 
+## 无 Docker 演示
+
+Windows 电脑可直接使用项目内的便携环境：
+
+```powershell
+.\scripts\dev\setup-infra.ps1 -AllowOutsideProjectJunction
+.\scripts\dev\start-demo.ps1
+.\scripts\dev\verify-demo.ps1
+```
+
+完整地址、窗口说明和下一阶段分工见
+[docs/运行验证与接力说明.md](docs/运行验证与接力说明.md)。
+
 默认管理员账号：
 
 ```text

@@ -5,6 +5,7 @@ import io.minio.BucketExistsArgs;
 import io.minio.MakeBucketArgs;
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
+import io.minio.SetBucketPolicyArgs;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -43,6 +44,7 @@ public class MinioStorageService {
                         .bucket(properties.getBucketName())
                         .build());
             }
+            applyPublicReadPolicy();
 
             minioClient.putObject(PutObjectArgs.builder()
                     .bucket(properties.getBucketName())
@@ -54,5 +56,18 @@ public class MinioStorageService {
         } catch (Exception exception) {
             throw new IllegalStateException("文件上传失败", exception);
         }
+    }
+
+    private void applyPublicReadPolicy() throws Exception {
+        String policy = "{\"Version\":\"2012-10-17\",\"Statement\":[{"
+                + "\"Effect\":\"Allow\","
+                + "\"Principal\":{\"AWS\":[\"*\"]},"
+                + "\"Action\":[\"s3:GetObject\"],"
+                + "\"Resource\":[\"arn:aws:s3:::" + properties.getBucketName() + "/*\"]"
+                + "}]}";
+        minioClient.setBucketPolicy(SetBucketPolicyArgs.builder()
+                .bucket(properties.getBucketName())
+                .config(policy)
+                .build());
     }
 }
