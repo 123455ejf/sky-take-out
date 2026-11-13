@@ -20,6 +20,18 @@ const routes = [
         name: 'Employee',
         component: () => import('../views/employee/index.vue'),
         meta: { title: '员工管理' }
+      },
+      {
+        path: 'category',
+        name: 'Category',
+        component: () => import('../views/category/index.vue'),
+        meta: { title: '分类管理' }
+      },
+      {
+        path: 'dish',
+        name: 'Dish',
+        component: () => import('../views/dish/index.vue'),
+        meta: { title: '菜品管理' }
       }
     ]
   },
